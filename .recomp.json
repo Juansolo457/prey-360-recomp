@@ -1,0 +1,18 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Prey",
+  "wikidata": "Q1143041",
+  "system": "Xbox 360",
+  "type": "recomp",
+  "original": {
+    "region": "USA/Europe"
+  },
+  "project": "Prey 360 Recompiled",
+  "status": "in-progress",
+  "targets": ["Windows"],
+  "toolchain": "Rexglue",
+  "approach": "The 360 default.xex statically recompiled to x86-64 C++ with ReXGlue, a game-specific runtime standing in for the Xbox, drawn by the SDK's Xenos renderer on Vulkan only (no D3D12). Windows first, then native Linux and the Steam Deck.",
+  "notes": "Started 2026-10-29 with the shape and lessons of the sister 360 recomps (DOA4, LOTR Conquest, Quake 4, DOAX2, GRAW, F.E.A.R.). id Tech 4 engine (Human Head / Venom Games port). Goal: main menu and a new game on Windows, gamepad first, keyboard and mouse where the engine kept them, then Linux. No game data included: bring your own Xbox 360 copy.",
+  "tags": ["vulkan", "steam-deck"],
+  "maintainers": [{ "name": "Juansolo457", "link": "https://github.com/Juansolo457" }]
+}

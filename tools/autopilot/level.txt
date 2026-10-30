@@ -1,0 +1,45 @@
+# Into the first level and a walk through it: menu.txt's path (START, A through SINGLE PLAYER >
+# NEW GAME > the "no saved games" prompt), the opening cutscene ends ~+105 s at the bathroom
+# mirror; then look around and walk out into the bar with the sticks, interact with A now and then.
+#   pwsh -NoProfile -File tools/smoke.ps1 -Seconds 240 -CaptureEvery 3 -Autopilot tools/autopilot/level.txt
+38.0 START
+44.0 START
+52.0 A
+58.0 A
+64.0 A
+70.0 A
+76.0 A
+82.0 A
+88.0 A
+94.0 A
+100.0 A
+110.0 stick 0 0 1 0 hold 1.5
+113.0 stick 0 0 -1 0 hold 3.0
+118.0 stick 0 0 0 1 hold 1.0
+120.0 stick 0 0 0 -1 hold 1.0
+123.0 stick 0 0 1 0 hold 1.5
+126.0 stick 0 1 0 0 hold 4.0
+131.0 A
+133.0 stick 0 0 1 0 hold 1.2
+135.0 stick 0 1 0 0 hold 4.0
+140.0 stick 0 0 -1 0 hold 1.2
+142.0 stick 0 1 0 0 hold 4.0
+147.0 A
+150.0 stick 0 0 1 0 hold 2.5
+154.0 stick 0 1 0 0 hold 5.0
+160.0 A
+163.0 stick 0 0 -1 0 hold 2.0
+166.0 stick 0 1 0 0 hold 5.0
+172.0 stick 0 0 1 0 hold 3.0
+176.0 stick 0 1 0 0 hold 5.0
+182.0 A
+185.0 stick 0 0 0 1 hold 1.0
+187.0 stick 0 0 0 -1 hold 2.0
+190.0 stick 0 1 0 0 hold 5.0
+196.0 stick 0 0 1 0 hold 2.0
+199.0 stick 0 1 0 0 hold 5.0
+205.0 A
+208.0 stick 0 0 -1 0 hold 2.0
+211.0 stick 0 1 0 0 hold 6.0
+220.0 stick 0 0 1 0 hold 4.0
+225.0 stick 0 1 0 0 hold 6.0

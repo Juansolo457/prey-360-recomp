@@ -1,0 +1,15 @@
+# Into the main menu: START on the title screen (it shows from ~+35 s on this PC after the
+# logo reel), then A every 6 s to take the first entry of each menu. B is never pressed.
+#   pwsh -NoProfile -File tools/smoke.ps1 -Seconds 120 -CaptureEvery 3 -Autopilot tools/autopilot/menu.txt
+# Timings from run 2 (2026-10-29): Venom logo at +15 s, PRESS START from +40 s.
+38.0 START
+44.0 START
+52.0 A
+58.0 A
+64.0 A
+70.0 A
+76.0 A
+82.0 A
+88.0 A
+94.0 A
+100.0 A
