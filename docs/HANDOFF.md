@@ -10,8 +10,18 @@ next model starts here, not from chat history.
 title screen, the main menu and New Game into the first level ("Last Call", the Roadhouse) all
 draw correctly on the Vulkan backend, at a steady 30 presents a second.** Run 5 played the
 opening cutscene (the letterboxed pan over the bathroom graffiti) and stood at the mirror with
-Tommy's reflection correct; nothing wrong seen in 59 captures. Four manifest rounds got there
-(below). Next: a walk through the bar (`tools/autopilot/level.txt`, run 6), then input (M3).
+Tommy's reflection correct; run 6 walked and looked around the bathroom for two minutes with
+correct lighting, stencil shadows and specular. Nothing wrong seen in 138 captures. Four
+manifest rounds got there (below). Next: out into the bar and the abduction (M2), then input (M3).
+
+### Run 6 (2026-10-29, `tools/autopilot/level.txt` 240 s; log `port/logs/smoke-20261029-232052.log`)
+Captures every 3 s in `private/captures/prey-level1-20261029-232052/`.
+- **No crash in 240 s; 29.8 presents a second** over the whole run. The script's stick moves
+  from +110 s turn and walk inside the bathroom: the stall and toilet, the "GET ME OUT OF HERE"
+  graffiti, the posters, the trash can, the sinks and urinals, the fluorescent lights with
+  their stencil shadows and the floor's specular all draw as on the console. The script never
+  found the door (its last pitch move left the view on the floor); a better walk is next.
+- Warnings: only `savedrive:\savegame.dat` (no save yet).
 
 ### Run 5 (2026-10-29, manifest round 4, `menu.txt` 180 s; log `port/logs/smoke-20261029-231549.log`)
 Captures every 3 s in `private/captures/prey-menu3-20261029-231549/`.
@@ -91,16 +101,19 @@ entry right after a `bctr` (referenced from 0x8202AFA0), already in the finder's
 5. round 3 (42 forwarders): see run 4.
 
 Repository: https://github.com/Juansolo457/prey-360-recomp, **public**, created 2026-10-29
-(wiki and projects off, branches deleted on merge), the bootstrap on `master` (this file's
-state). Branch protection as the sister repos (`audit` required and strict, conversation
-resolution, admins included, no force pushes or deletion) is applied right after the push and
-read back; CodeRabbit is enabled in its dashboard (see "Repository state" below once done).
+(wiki and projects off, branches deleted on merge), the bootstrap commit on `master`. Branch
+protection read back from the API after the push (2026-10-29): `audit` required and strict,
+conversation resolution on, admins included, force pushes and deletion off. The first `audit`
+run on `master` passed (9 s). CodeRabbit lists the repository in its dashboard (Repositories:
+prey-360-recomp, Public; the GitHub App covers the whole account) and reviews pull requests
+per `.coderabbit.yaml`.
 
 ## Next steps
-1. **M2, playing:** `tools/autopilot/level.txt` (run 6) walks out of the bathroom into the
-   bar; every capture checked for rendering bugs (the TV, the jukebox, Jen, the abduction
-   sequence with its lights and portals); then the first alien level (`lotaa`) the same way,
-   with the gravity and portal effects, against console footage. Saves (`savedrive:`).
+1. **M2, playing:** a `level.txt` that finds the bathroom door (turn left from the mirror,
+   walk) and reaches the bar; every capture checked for rendering bugs (the TV, the jukebox,
+   Jen, the abduction sequence with its lights and portals); then the first alien level
+   (`lotaa`) the same way, with the gravity and portal effects, against console footage. Saves
+   (`savedrive:`). The user's own play with a real pad is the better test now that it runs.
 2. **`find_vcall_thunks.py`** could go: `find_code_pointers.py` covers its case whenever the
    forwarder has a vtable pointer. Keep both until a project shows a forwarder without one.
 3. **Input (M3):** gamepad is through; then keyboard and mouse. The engine's `bind`, key names
